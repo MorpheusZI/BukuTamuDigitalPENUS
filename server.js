@@ -39,6 +39,7 @@ db.connect((err) => {
       "serverimg",
       `${file.name}`
     );
+    console.log(req.body.sigpad);
     console.log(file);
     const insertSql = `INSERT INTO info_tamu(Nama_tamu,notelp_tamu, Alamat_tamu, Keperluan_tamu) VALUES ('${req.body.Nama}', '${req.body.Notelp}', '${req.body.Alamat}','${req.body.anu}');`;
     db.query(insertSql, (err, result) => {
